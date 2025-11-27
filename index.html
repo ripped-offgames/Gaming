@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4MCPVK8QF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y4MCPVK8QF');
+</script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Games</title>
@@ -10,8 +19,7 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #0a2540, #1b4f72, #21618c);
-      background-attachment: fixed;
+      background: #000401;
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -23,10 +31,9 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 40px 20px;
-      background: rgba(0, 30, 60, 0.6);
-      border-radius: 20px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 8px 30px rgba(0,0,50,0.6);
+      background: #000401;
+      border-radius: 10px;
+      position: relative;
     }
 
     h1, h2, h3, p {
@@ -36,9 +43,7 @@
 
     h1 {
       font-size: 2.5rem;
-      font-weight: 700;
       color: #66ccff;
-      text-shadow: 0 0 10px rgba(0,150,255,0.8);
     }
 
     h3 {
@@ -48,7 +53,7 @@
 
     .game-buttons {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* always 3 columns */
+      grid-template-columns: repeat(3, 1fr);
       gap: 25px;
       margin-top: 40px;
     }
@@ -85,14 +90,18 @@
       border: 2px solid rgba(100,180,255,0.5);
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
+    .feedback-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 0, 10, 0.2);
+      border: 2px solid rgba(0,150,255,0.4);
+      border-radius: 5px;
+      padding: 12px 10px;
+      color: #e0f7ff;
       font-size: 14px;
-      color: #a0cce0;
-      background: rgba(0,0,40,0.7);
-      backdrop-filter: blur(6px);
-      margin-top: auto;
+      cursor: pointer;
+
     }
   </style>
 </head>
@@ -100,6 +109,10 @@
   <div class="container">
     <h1>Games</h1>
     <p>Some of the games may take a while to load.</p>
+
+    <button class="feedback-button" onclick="openGame('https://docs.google.com/forms/d/e/1FAIpQLSfjgcg5KoxjY-QtmheZzsVoapRdigJrCCCxakkH-XzquIbReA/viewform?embedded=true')">
+      Suggest Game
+    </button>
 
     <div class="game-buttons">
       <button onclick="openGame('baloonstd/baloonstd.html')"> <img src="img/2.webp">Play Bloons TD!</button>
@@ -118,6 +131,12 @@
       <button onclick="openGame('MonkeyMart')"> <img src="img/mm.jpg">Play Monkey Mart!</button>
       <button onclick="openGame('Minecraft.html')"> <img src="img/minecraft.jpg">Play Minecraft!</button>
       <button onclick="openGame('EggyCar')"> <img src="img/eggycar.png">Play Eggy Car!</button>
+      <button onclick="window.open('https://mk48.io', '_blank')"><img src="img/mk48.png">Play mk48.io!</button>
+      <button onclick="openGame('BasketballStarsUnblocked.github.io/index.html')"> <img src="img/basketball-stars.png">Play Basketball Stars!</button>
+      <button onclick="window.open('https://www.coolmathgames.com/0-tag-game/play', '_blank')"><img src="img/tag.png">Play Tag!</button>
+      <button onclick="window.open('https://ripped-offgames.github.io/fnaf/index.html', '_blank')"><img src="img/fnaf.png">Play FNAF!</button>
+      <button onclick="window.open('https://ripped-offgames.github.io/buckshot/index.html', '_blank')"><img src="img/backshot.png">Play Buckshot Roulette!</button>
+      
     </div>
   </div>
 
